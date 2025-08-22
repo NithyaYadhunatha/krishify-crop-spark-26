@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Krishify Premium Agricultural Platform Design System */
+
+@layer base {
+  :root {
+    /* Krishify Color Palette - Premium Agricultural Theme */
+    --background: 0 0% 0%; /* Pure Black */
+    --background-smoky: 92 88% 3%; /* Smoky Black #081707 */
+    --foreground: 0 0% 92%; /* Off-white #EAEAEA */
+    
+    /* Primary Agricultural Colors */
+    --metallic-green: 100 67% 28%; /* #237414 - Primary CTAs */
+    --apple-green: 94 49% 51%; /* #6DBE47 - Secondary highlights */
+    --granny-apple: 79 38% 72%; /* #BAD799 - Subtle backgrounds */
+    --morning-blue: 125 14% 60%; /* #8AAC8B - UI accents */
+    
+    /* Semantic Design Tokens */
+    --primary: var(--metallic-green);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--apple-green);
+    --secondary-foreground: var(--background);
+    --accent: var(--morning-blue);
+    --accent-foreground: var(--background);
+    
+    /* Glass Morphism */
+    --glass-bg: 0 0% 5% / 0.2;
+    --glass-border: var(--metallic-green) / 0.3;
+    --glass-shadow: var(--metallic-green) / 0.1;
+    
+    /* UI Elements */
+    --card: var(--background-smoky);
+    --card-foreground: var(--foreground);
+    --muted: var(--granny-apple);
+    --muted-foreground: 0 0% 70%;
+    --border: var(--morning-blue) / 0.2;
+    --input: var(--background-smoky);
+    --ring: var(--metallic-green);
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-smoky)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--glass-bg)), hsl(var(--background-smoky)) 80%);
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--metallic-green) / 0.3) 0%, transparent 70%);
+    --gradient-text: linear-gradient(135deg, hsl(var(--metallic-green)) 0%, hsl(var(--apple-green)) 100%);
+    
+    /* Shadows & Effects */
+    --glow-primary: 0 0 30px hsl(var(--metallic-green) / 0.4);
+    --glow-secondary: 0 0 20px hsl(var(--apple-green) / 0.3);
+    --glow-accent: 0 0 15px hsl(var(--morning-blue) / 0.2);
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.3);
+    --shadow-float: 0 10px 40px hsl(var(--metallic-green) / 0.2);
+    
+    /* Typography Scale */
+    --font-heading: 'EB Garamond', serif;
+    --font-body: 'Poppins', sans-serif;
+    
+    /* Animation Timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-body;
+    background: var(--gradient-hero);
+    min-height: 100vh;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  /* Glass Morphism Components */
+  .glass-card {
+    @apply relative overflow-hidden rounded-2xl;
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .glass-nav {
+    @apply fixed top-0 w-full z-50;
+    background: hsl(var(--background-smoky) / 0.8);
+    backdrop-filter: blur(30px);
+    border-bottom: 1px solid hsl(var(--glass-border));
+  }
+  
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+  
+  /* Floating Elements */
+  .float-element {
+    @apply transform transition-transform duration-300 ease-in-out;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .hover-float:hover {
+    @apply transform -translate-y-2;
+    box-shadow: var(--shadow-float);
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* AI Glow Ring */
+  .ai-ring {
+    @apply relative;
+  }
+  
+  .ai-ring::before {
+    @apply absolute inset-0 rounded-full;
+    content: '';
+    background: conic-gradient(from 0deg, hsl(var(--metallic-green)), hsl(var(--apple-green)), hsl(var(--metallic-green)));
+    animation: rotate 3s linear infinite;
+    padding: 2px;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+  }
+  
+  /* Agricultural Pattern Background */
+  .pattern-bg {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--metallic-green) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--apple-green) / 0.1) 0%, transparent 50%);
+  }
+}
+
+@layer utilities {
+  /* Animation Keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: var(--glow-primary); }
+    50% { box-shadow: var(--glow-secondary); }
+  }
+  
+  @keyframes slide-up {
+    from { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in-scale {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
