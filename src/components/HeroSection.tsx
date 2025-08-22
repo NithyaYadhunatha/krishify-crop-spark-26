@@ -16,7 +16,7 @@ const HeroSection = () => {
           {/* Content */}
           <div className="lg:w-1/2 space-y-8 animate-slide-up">
             <div className="space-y-4">
-              <div className="inline-flex items-center px-4 py-2 rounded-full glass-card border border-metallic-green/30">
+              <div className="inline-flex items-center px-4 py-2 rounded-full glass-card-light border border-metallic-green/40 glow-accent">
                 <Sparkles className="w-4 h-4 text-metallic-green mr-2" />
                 <span className="text-sm font-medium text-metallic-green">AI-Powered Agriculture</span>
               </div>
@@ -68,7 +68,7 @@ const HeroSection = () => {
           <div className="lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0">
             <div className="relative">
               {/* Main Visual Card */}
-              <div className="glass-card p-8 max-w-md glow-primary hover-float">
+              <div className="glass-card-floating p-8 max-w-md glow-primary hover-float">
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
                     <div className="w-12 h-12 bg-metallic-green rounded-lg flex items-center justify-center">
@@ -100,11 +100,11 @@ const HeroSection = () => {
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 glass-card rounded-full flex items-center justify-center animate-glow-pulse">
+              <div className="absolute -top-4 -right-4 w-16 h-16 glass-card-floating rounded-full flex items-center justify-center animate-glow-pulse glow-secondary">
                 <TrendingUp className="w-8 h-8 text-metallic-green" />
               </div>
               
-              <div className="absolute -bottom-6 -left-6 glass-card p-3 rounded-lg animate-float" style={{ animationDelay: '0.5s' }}>
+              <div className="absolute -bottom-6 -left-6 glass-card-floating p-3 rounded-lg animate-float glow-accent" style={{ animationDelay: '0.5s' }}>
                 <div className="text-xs text-muted-foreground">Live Market</div>
                 <div className="font-bold text-apple-green">₹12.5L traded</div>
               </div>

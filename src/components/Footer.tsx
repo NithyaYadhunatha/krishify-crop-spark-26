@@ -46,7 +46,7 @@ const Footer = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 pattern-bg opacity-30"></div>
       
-      <div className="relative z-10 bg-gradient-to-br from-background-smoky/90 to-background/95 backdrop-blur-xl">
+      <div className="relative z-10 glass-footer">
         <div className="container mx-auto px-6 py-16">
           {/* Main Footer Content */}
           <div className="grid lg:grid-cols-5 gap-8 mb-12">
@@ -108,7 +108,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="glass-card p-6 mb-8">
+          <div className="glass-card-floating p-6 mb-8">
             <h3 className="font-heading font-semibold text-foreground mb-4">Get in Touch</h3>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="flex items-center space-x-3">
@@ -144,7 +144,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div className="glass-card p-6 mb-8">
+          <div className="glass-card-floating p-6 mb-8">
             <div className="grid md:grid-cols-2 gap-6 items-center">
               <div>
                 <h3 className="font-heading font-semibold text-foreground mb-2">

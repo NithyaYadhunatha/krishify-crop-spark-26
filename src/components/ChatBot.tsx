@@ -54,7 +54,7 @@ const ChatBot = () => {
         <div className={`fixed bottom-6 right-6 w-80 h-96 z-50 transition-all duration-300 ${
           isMinimized ? 'h-12' : 'h-96'
         }`}>
-          <div className="glass-card h-full flex flex-col shadow-2xl glow-primary">
+          <div className="glass-card-floating h-full flex flex-col shadow-2xl glow-primary">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-border/30">
               <div className="flex items-center space-x-3">
@@ -90,8 +90,8 @@ const ChatBot = () => {
                     <div key={index} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
                       <div className={`max-w-[80%] p-3 rounded-lg text-sm ${
                         msg.type === 'user' 
-                          ? 'bg-metallic-green text-white ml-auto' 
-                          : 'bg-background-smoky text-foreground border border-border/30'
+                          ? 'bg-metallic-green text-white ml-auto shadow-glow-primary' 
+                          : 'glass-card-light text-foreground border border-border/40'
                       }`}>
                         <p>{msg.content}</p>
                         <p className={`text-xs mt-1 opacity-70 ${
@@ -110,7 +110,7 @@ const ChatBot = () => {
                     {quickActions.slice(0, 3).map((action, index) => (
                       <button
                         key={index}
-                        className="text-xs px-2 py-1 bg-morning-blue/10 text-morning-blue rounded-full hover:bg-morning-blue/20 transition-colors"
+                        className="text-xs px-2 py-1 glass-card-light text-morning-blue rounded-full hover:bg-morning-blue/20 transition-colors border border-morning-blue/30"
                       >
                         {action}
                       </button>
@@ -126,7 +126,7 @@ const ChatBot = () => {
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder="Ask me about prices, tools, or subsidies..."
-                      className="flex-1 px-3 py-2 text-sm bg-background-smoky border border-morning-blue/30 rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-metallic-green"
+                      className="flex-1 px-3 py-2 text-sm glass-card-light border border-morning-blue/40 rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:border-metallic-green"
                       onKeyPress={(e) => e.key === 'Enter' && console.log('Send message:', message)}
                     />
                     <Button variant="ai" size="icon" className="h-8 w-8">

@@ -46,7 +46,7 @@ const TradingOptions = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 animate-slide-up">
-          <div className="inline-flex items-center px-4 py-2 rounded-full glass-card border border-metallic-green/30 mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full glass-card-light border border-metallic-green/40 mb-6 glow-accent">
             <Globe className="w-4 h-4 text-metallic-green mr-2" />
             <span className="text-sm font-medium text-metallic-green">Dual Trading Platform</span>
           </div>
@@ -68,7 +68,7 @@ const TradingOptions = () => {
           {tradingModes.map((mode, index) => (
             <div 
               key={mode.id}
-              className="glass-card p-8 hover-float group transition-all duration-300"
+              className="glass-card-floating p-8 hover-float group transition-all duration-300"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Header */}
@@ -125,7 +125,7 @@ const TradingOptions = () => {
         </div>
 
         {/* Live Stats */}
-        <div className="glass-card p-6 animate-fade-in-scale">
+        <div className="glass-card-floating p-6 animate-fade-in-scale glow-accent">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-3 h-3 bg-metallic-green rounded-full animate-pulse"></div>

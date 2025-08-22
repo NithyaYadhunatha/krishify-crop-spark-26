@@ -70,6 +70,7 @@ export default {
 				'gradient-card': 'var(--gradient-card)',
 				'gradient-glow': 'var(--gradient-glow)',
 				'gradient-text': 'var(--gradient-text)',
+				'agricultural-bg': "url('/src/assets/agricultural-background.jpg')",
 			},
 			boxShadow: {
 				'glow-primary': 'var(--glow-primary)',

@@ -49,7 +49,7 @@ const Header = () => {
               <MessageCircle className="w-4 h-4 mr-2" />
               Ask Krishify AI
             </Button>
-            <Button variant="outline" size="sm" asChild>
+            <Button variant="outline-glass" size="sm" asChild>
               <Link to="/login">Login</Link>
             </Button>
             <Button variant="hero" size="sm" asChild>
@@ -89,7 +89,7 @@ const Header = () => {
                   <MessageCircle className="w-4 h-4 mr-2" />
                   Ask Krishify AI
                 </Button>
-                <Button variant="outline" size="sm" className="w-full" asChild>
+                <Button variant="outline-glass" size="sm" className="w-full" asChild>
                   <Link to="/login">Login</Link>
                 </Button>
                 <Button variant="hero" size="sm" className="w-full" asChild>

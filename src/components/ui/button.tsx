@@ -19,12 +19,13 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         
-        // Krishify Agricultural Variants
-        hero: "bg-metallic-green text-white font-semibold rounded-full shadow-glow-primary hover:shadow-glow-secondary hover:scale-105 transition-all duration-300",
-        "secondary-glass": "glass-card border border-apple-green/30 text-apple-green font-semibold hover:bg-apple-green/10 hover:shadow-glow-accent",
-        ai: "bg-morning-blue/20 text-morning-blue border border-morning-blue/30 font-medium hover:bg-morning-blue/30 hover:shadow-glow-accent rounded-full",
-        "ai-chat": "ai-ring bg-metallic-green text-white rounded-full w-12 h-12 p-0 hover:scale-110 shadow-glow-primary hover:shadow-glow-secondary",
-        glass: "glass-card text-foreground border border-metallic-green/20 hover:border-metallic-green/40 hover:shadow-glow-primary"
+        // Krishify Agricultural Variants - Enhanced Glassmorphism
+        hero: "bg-metallic-green text-white font-semibold rounded-full shadow-glow-primary hover:shadow-glow-secondary hover:scale-105 transition-all duration-300 backdrop-blur-sm",
+        "secondary-glass": "glass-card-light border border-apple-green/40 text-apple-green font-semibold hover:bg-apple-green/15 hover:shadow-glow-accent hover:border-apple-green/60",
+        ai: "glass-card-light text-morning-blue border border-morning-blue/40 font-medium hover:bg-morning-blue/20 hover:shadow-glow-accent rounded-full hover:border-morning-blue/60",
+        "ai-chat": "ai-ring bg-metallic-green text-white rounded-full w-12 h-12 p-0 hover:scale-110 shadow-glow-primary hover:shadow-glow-secondary backdrop-blur-sm",
+        glass: "glass-card-floating text-foreground border border-metallic-green/30 hover:border-metallic-green/50 hover:shadow-glow-primary",
+        "outline-glass": "glass-card-light border border-foreground/20 text-foreground hover:bg-foreground/10 hover:text-foreground hover:border-foreground/40"
       },
       size: {
         default: "h-10 px-4 py-2",
