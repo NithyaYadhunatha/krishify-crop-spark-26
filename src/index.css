@@ -77,10 +77,6 @@
   
   body {
     @apply bg-background text-foreground font-body;
-    background: 
-      linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-      url('/src/assets/agricultural-background.jpg') center center / cover no-repeat fixed,
-      var(--gradient-hero);
     min-height: 100vh;
     position: relative;
   }
@@ -92,9 +88,35 @@
     left: 0;
     right: 0;
     bottom: 0;
+    /* Background placeholder with gradient overlay */
     background: 
-      linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-      url('/src/assets/agricultural-background.jpg') center center / cover no-repeat;
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      /* Placeholder pattern */
+      linear-gradient(45deg, hsl(var(--background-smoky)) 25%, transparent 25%),
+      linear-gradient(-45deg, hsl(var(--background-smoky)) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, hsl(var(--background-smoky)) 75%),
+      linear-gradient(-45deg, transparent 75%, hsl(var(--background-smoky)) 75%),
+      /* Base background */
+      hsl(var(--background));
+    background-size: 
+      100% 100%,
+      20px 20px,
+      20px 20px,
+      20px 20px,
+      20px 20px,
+      100% 100%;
+    background-position: 
+      0 0,
+      0 0,
+      0 0,
+      10px 10px,
+      10px 10px,
+      0 0;
     z-index: -1;
   }
   
